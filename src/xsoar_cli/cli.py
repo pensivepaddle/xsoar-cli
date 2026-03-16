@@ -19,6 +19,7 @@ from .commands.integration import commands as integration_commands
 from .commands.manifest import commands as manifest_commands
 from .commands.pack import commands as pack_commands
 from .commands.playbook import commands as playbook_commands
+from .commands.playground import commands as playground_commands
 from .commands.plugins import commands as plugin_commands
 from .commands.rbac import commands as rbac_commands
 from .log import LoggingSetup, setup_logging
@@ -68,6 +69,7 @@ def _register_commands() -> None:
     cli.add_command(integration_commands.integration)
     cli.add_command(manifest_commands.manifest)
     cli.add_command(playbook_commands.playbook)
+    cli.add_command(playground_commands.playground)
     cli.add_command(graph_commands.graph)
     cli.add_command(plugin_commands.plugins)
     cli.add_command(rbac_commands.rbac)
